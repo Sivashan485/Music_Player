@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.musicplayer.MusicPlayerController">
+    <MenuBar AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+             AnchorPane.topAnchor="0.0">
+        <Menu mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" onAction="#selectFolderPath" text="Select File"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+            <MenuItem mnemonicParsing="false" text="Delete"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+            <MenuItem mnemonicParsing="false" text="About"/>
+        </Menu>
+    </MenuBar>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="hbox-main" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="204.0" HBox.hgrow="ALWAYS">
+            <ListView fx:id="musicList" onMouseClicked="#playSelectedMusic" prefHeight="200.0"
+                      prefWidth="200.0">
+                <VBox.margin>
+                    <Insets left="20.0" right="20.0"/>
+                </VBox.margin>
+            </ListView>
+            <Label text="Label" fx:id="nextMusic" VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets top="30.0"/>
+                </VBox.margin>
+            </Label>
+        </VBox>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+            <Label text="Label" fx:id="currentMusic"/>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true"/>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                <Button mnemonicParsing="false" onAction="#playPreviousSong" text="back"/>
+                <Button mnemonicParsing="false" onAction="#toggleMusicButton" text="Play or Stop"/>
+                <Button mnemonicParsing="false" onAction="#playNextSong" text="Button"/>
+            </HBox>
+        </VBox>
+    </HBox>
+</AnchorPane>

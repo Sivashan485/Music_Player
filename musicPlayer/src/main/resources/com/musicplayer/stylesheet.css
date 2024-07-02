@@ -1,0 +1,29 @@
+Button {
+    -fx-background-color:  rgb(207, 207, 207);
+    -fx-background-insets: 0, 0 0 1 1;
+    -fx-border-color: rgb(207, 207, 207);
+    -fx-border-width: 2px;
+    -fx-text-fill: white;
+    -fx-pref-width: 60px;
+    -fx-pref-height: 60px;
+    -fx-alignment: center;
+    -fx-background-radius: 60em;
+    -fx-border-radius: 60em;
+    -fx-margin-left:30px;
+    -fx-font-size: 10px;
+    -fx-cursor: hand;
+}
+
+Button:hover {
+    -fx-background-color: linear-gradient(to bottom, hotpink 0%, tomato 100%), rgb(80, 80, 80);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 0, 4);
+    -fx-background-insets: 0, 0 0 1 1;
+}
+
+Button:pressed, Button.is-clicked {
+    -fx-background-color: linear-gradient(to bottom, gray 0%, dimgray 100%), rgb(155, 0, 0);
+    -fx-background-insets: 0, 0 0 1 1;
+}
+.hbox-main {
+    -fx-background-color: rgb(80, 80, 80);
+}
